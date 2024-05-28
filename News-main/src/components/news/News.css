@@ -1,10 +1,55 @@
-/* App.css */
-
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+
+
+
+/* News.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer horizontalement */
+  justify-content: center; /* Centrer verticalement */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer horizontalement */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 10px; /* Ajouter une marge au-dessus du titre */
+}
+
+.logo {
+  height: 80px; /* Ajustez la taille du logo selon vos besoins */
+  margin-bottom: 10px; /* Ajouter une marge en dessous du logo */
+}
+
+/* Logo */
+.logo {
+  height: 40px; /* Ajustez la taille du logo selon vos besoins */
+  margin-right: 10px; /* Ajoutez une marge à droite pour séparer le logo du titre */
+
+}
+
+/* Card Hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(148, 0, 211, 0.4); /* Retour au mauve pastel */
+  background-color: rgba(148, 0, 211, 0.1); 
 }
 
 .container {
@@ -12,40 +57,70 @@ body {
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-h2{
-    margin-top: 10px;
-    margin-left: 10px;
-}
 
-h1 {
-  color: #333;
+.header {
+  text-align: center;
   margin-bottom: 20px;
 }
-.card-b{
-    background-color: rgb(255, 201, 251);
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #333;
 }
+
+/* Error Message */
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* News Cards */
+.news-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .card {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding:10px;
-}
-
-.card-body {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
-h3 {
-  font-size: 2.25rem;
+.card h3 {
+  font-size: 1.75rem;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #444;
 }
 
-.card-text {
+.card p {
   font-size: 1rem;
-  color: #858282;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.875rem;
+  }
 }
